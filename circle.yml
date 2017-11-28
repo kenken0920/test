@@ -1,3 +1,10 @@
 machine:
   services:
     - redis
+dependencies:
+  pre:
+    - echo "pre"
+test:
+  override:
+    - echo "CIRCLE_PR_NUMBER ${CIRCLE_PR_NUMBER}"
+    - echo "CI_PULL_REQUEST ${CI_PULL_REQUEST}"
