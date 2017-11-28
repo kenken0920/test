@@ -1,3 +1,9 @@
 machine:
   services:
     - redis
+dependencies:
+  pre:
+    - echo "pre"
+test:
+  override:
+    - echo "test"
